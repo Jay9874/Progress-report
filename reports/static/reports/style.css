@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+
+:root{
+    --blue:#6495ed;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --border:2rem solid rgba(0,0,0,.1);
+    --outline:1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0%; padding: 0%;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body{
+    background:#eee;
+}
+
+header{
+    position: fixed;
+    top:0; left: 1px; right: 1px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    background:#fff;
+    box-shadow: var(--box-shadow);
+}
+
+header .heading{
+    font-size: 2rem;
+    font-weight: bolder;
+    color:var(--black);
+}
+
+
+header .seach-form{
+    position: absolute;
+    top:110%; right:-110%;
+    width: 50rem;
+    height:5rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+
+  
+header.search-form input{
+    height:100%;
+    width:100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color:var(--black);
+    padding:0 1.5rem;
+} 
+header .search-form.active{
+   right:2rem;
+   transition: .4s linear;
+} 
+
+header .search-form label{
+    font-size: 2.2rem;
+    padding-right: 1.5rem;
+    color:var(--black);
+    cursor: pointer;
+}
+
+header .search-form label:hover{
+    color: var(--blue);
+}
+ 
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+/* .Logo_content .logo{
+    color:#130f40;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+}
+.Logo_content .logo i{
+    font-size: 28px;
+    margin-right: 5px;
+}
+.Logo_content .logo .logo_name{
+    font-size: 20px;
+    font-weight: 400;
+} */
+
+.sidebar{
+    position: fixed;
+    top: 68px;
+    left: 1px;
+    height: 103%;
+    width: 185px;
+    background-color: #D3D3D3;
+    padding: 5px 12px;
+}
+.sidebar #button{
+    position: absolute;
+    left: 90%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translate(-50px);
+}
+.sidebar ul{
+    margin-top: 20px;
+}
+.sidebar ul li{
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin: 0 5px;
+  list-style: none;
+  line-height: 50px;
+
+}
+.sidebar ul li a{
+    color: #130f40;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+
+}
+.sidebar ul li a:hover{
+    color: #eee;
+    background: #6495ed;
+    
+}
+.sidebar ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}

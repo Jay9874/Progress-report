@@ -1,0 +1,14 @@
+{% extends "reports/layout.html" %}
+
+
+{% block body %}
+<h1>Hello, {{ request.user.first_name }}</h1>
+
+{% endblock %}
+
+{% block title %}
+<a href="{% url 'logout' %}">
+    <i class='bx bx-log-out'></i>
+    <span class="link">Logout</span>
+</a>
+{% endblock %}

@@ -1,0 +1,94 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academics</title>
+    <link rel="stylesheet" href="{% static 'reports/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <header>
+
+        <h1 href="#" class="heading">
+            {% block body %}
+            {% endblock %}
+            <!-- Hello,User -->
+        </h1>
+
+        <!-- <div class="icons">
+                <div class="fas fa-search" id="search-btn"></div>
+                <div class="fas fa-user" id="logout-btn"></div> -->
+
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        <!-- header ends here -->
+    </header>
+</head>
+
+<body>
+
+
+    <!-- <div class="Logo_content"></div>
+                <div class="logo"></div>
+                <i class='bx bxs-building'></i>
+                <div class="logo_name">School Logo</div>
+                 -->
+    <div class="sidebar">
+
+        <i class='bx bx-menu' id="button"></i>
+
+        <ul class="nav_list">
+
+            <li>
+                <a href="#">
+                    <i class='bx bx-book-open'></i>
+                    <span class="link">Score</span>
+                </a>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-bar-chart-alt-2'></i>
+                    <span class="link">Analytics</span>
+                </a>
+            <li>
+                <a href="#">
+                    <i class='bx bx-run'></i>
+                    <span class="link">Co-curriculum</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-medal'></i>
+                    <span class="link">Achievement</span>
+                </a>
+            <li>
+                <a href="#">
+                    <i class='bx bx-notepad'></i>
+                    <span class="link">Remarks</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog'></i>
+                    <span class="link">setting</span>
+                </a>
+            <li>
+                {% block title %}
+                {% endblock %}
+            </li>
+        </ul>
+
+
+
+
+
+        <script src="js/script.js"></script>
+</body>
+
+</html>
