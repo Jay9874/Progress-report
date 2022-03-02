@@ -49,6 +49,7 @@ header .heading{
     font-size: 2rem;
     font-weight: bolder;
     color:var(--black);
+    background-color: red;
 }
 
 

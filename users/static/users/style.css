@@ -225,7 +225,7 @@ main{
   font-weight: 500;
   
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   position: static;
   display: flex;
   align-content: space-around;
@@ -234,87 +234,42 @@ main{
   
 }
 
-.username{
 
+.credentials_menu{
+  font-family: 'Arial', sans-serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
 
-.username input{
-  
-  
-  border-radius: 2in;
-  border: none;
-  height: 40px;
-  width: 25vw;
-  outline: none;
-  text-align: center;
+input{
+  padding: 0 8px;
 }
 
-.password{
+.credentials{
   margin-top: 10px;
-  display: flex;
-  justify-content: center;
-}
-
-.password input {
- 
-  border-radius: 2in;
-  border: none;
-  height: 40px;
-  width: 25vw;
-  border: none;
-  resize: none;
-  outline: none;
+  height: 30px;
+  border-radius: 20px;
   text-align: center;
-
+  width: 50%;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.747);
 }
 
+.credentials_login{
+  width: 70px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.credentials_login:hover{
+  background-color: rgba(255, 255, 255, 0.747);
+}
 
 .forgot{
-  font-family: 'Montserrat', sans-serif;
-  margin: 20px;
-}
-
-.forgot a{
-  
-  text-decoration: none;
-  cursor: pointer;
-  
-}
-
-.forgot label{
   margin-bottom: 20px;
-}
-
-.signin{
-  margin: 20px;
-}
-
-
-#login_button{
-  cursor: pointer;
-  height: 40px;
-  width: 80px;
-  border: none;
-  border-radius: 2in;
-  background-color: transparent;
-
-}
-
-.signin input:hover{
-  background-color: rgba(204, 30, 30, 0.747);
-}
-
-.signin button a{
-  text-decoration: none;
-  color: black;
-}
-
-::placeholder{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-
 }
 
 .footer{

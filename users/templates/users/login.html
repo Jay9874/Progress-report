@@ -2,17 +2,17 @@
 
 {% block body %}
     {% if message %}
-        <div>
+        <div class="alert_message">
             {{ message }}
         </div>
     {% endif %}
-<form action="{% url 'login' %}" method="post">
+<form class="credentials_menu" action="{% url 'login' %}" method="post">
     {% csrf_token %}
    
-    <input type="text" name="username" minlength="4" maxlength="12"
+    <input class="credentials credentials_username" type="text" name="username" minlength="4" maxlength="12"
         placeholder="Teacher/Student ID">
-    <input type="password" name="password" maxlength="12" placeholder="Password">
-    <input type="submit" value="Login">
+    <input class="credentials credentials_password" type="password" name="password" maxlength="12" placeholder="Password">
+    <input class="credentials credentials_login" type="submit" value="Login">
 
 </form>
 

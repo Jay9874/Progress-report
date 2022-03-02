@@ -22,7 +22,7 @@
         <nav class="nav">
             <ul class="leftmenu">
                 <li class="list-item" id="brand">
-                    <img src="IIT.svg" alt="school_logo" id="school_logo">
+                    <img src="{% static 'users/IIT.svg' %}" alt="school_logo" id="school_logo">
                     <span>
                         <h3>
                             IIT Madras
@@ -65,8 +65,6 @@
             {% endblock %}
             <div class="forgot">
 
-                <input type="checkbox" name="remember" id="remember">
-                <label for="remember">Remember me</label><br>
                 <a href="">Forgot Password/User ID</a>
 
             </div>
