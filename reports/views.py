@@ -10,3 +10,9 @@ def index(request):
         return HttpResponseRedirect(reverse("login"))
 
     return render(request, "reports/student.html")
+
+def scores(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse("login"))
+    
+    return render(request, "reports/student.html")
