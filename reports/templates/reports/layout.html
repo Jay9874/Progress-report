@@ -5,6 +5,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,12 +16,8 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <header>
 
-        <h1 href="#" class="heading">
-            {% block body %}
-            {% endblock %}
-            <!-- Hello,User -->
-        </h1>
-
+        {% block body %}
+        {% endblock %}
         <!-- <div class="icons">
                 <div class="fas fa-search" id="search-btn"></div>
                 <div class="fas fa-user" id="logout-btn"></div> -->
@@ -42,7 +40,7 @@
                  -->
     <div class="sidebar">
 
-        <i class='bx bx-menu' id="button"></i>
+
 
         <ul class="nav_list">
 
@@ -83,12 +81,13 @@
                 {% endblock %}
             </li>
         </ul>
+    </div>
+    <div class="container_marks">
+     {% block container %}
+     {% endblock %}
+     </div>
 
-
-
-
-
-        <script src="js/script.js"></script>
+        <!-- <script src="js/script.js"></script> -->
 </body>
 
 </html>

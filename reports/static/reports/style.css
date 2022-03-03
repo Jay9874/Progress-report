@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 :root{
     --blue:#6495ed;
     --black:#130f40;
@@ -13,7 +13,9 @@
 
 
 *{
-    font-family: 'Poppins', sans-serif;
+
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     margin: 0%; padding: 0%;
     box-sizing: border-box;
     outline: none; border:none;
@@ -30,27 +32,38 @@ html{
 }
 
 body{
+    
+    /* background-color: red; */
     background:#eee;
 }
 
 header{
-    position: fixed;
-    top:0; left: 1px; right: 1px;
-    z-index: 1000;
+    width: 100%;
+    position: static;
+    top: 0;
+    height: 35px;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding:2rem 9%;
-    background:#fff;
+    padding: 10px 15px;
+    background-color: cadetblue;
+    /* background:#fff; */
+
     box-shadow: var(--box-shadow);
 }
 
-header .heading{
+.greet{
+    margin-left: 0;
+    font-size: small;
+}
+
+/* ul li header .heading{
     font-size: 2rem;
     font-weight: bolder;
     color:var(--black);
     background-color: red;
-}
+} */
 
 
 header .seach-form{
@@ -116,8 +129,8 @@ body{
 
 .sidebar{
     position: fixed;
-    top: 68px;
     left: 1px;
+    z-index: 2;
     height: 103%;
     width: 185px;
     background-color: #D3D3D3;
@@ -166,4 +179,13 @@ body{
     border-radius: 12px;
     line-height: 50px;
     text-align: center;
+}
+
+.container_marks{
+    margin-left: 185px;
+}
+
+.marks{
+    margin-left: 185px;
+    z-index: 3;
 }
