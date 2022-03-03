@@ -9,7 +9,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script src="https://kit.fontawesome.com/e8aac5ac55.js" crossorigin="anonymous"></script>
     <title>Academics</title>
     <link rel="stylesheet" href="{% static 'reports/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -19,13 +19,15 @@
 
 <body>
     <header>
+        <div class="greet">
+            <h2>Hello, {{ request.user.first_name }}</h2>
+        </div>
 
-        {% block body %}
-        {% endblock %}
+
         <!-- <div class="icons">
                 <div class="fas fa-search" id="search-btn"></div>
                 <div class="fas fa-user" id="logout-btn"></div> -->
-    
+
         <form action="" class="search-form">
             <input type="search" id="search-box" placeholder="search here...">
             <label for="search-box" class="fas fa-search"></label>
@@ -46,15 +48,26 @@
         <ul class="nav_list">
 
             <li>
-                <a href="{% url 'reports:reports/scores' %}">
+                <a href="{% url 'reports:home' %}">
+                    <i class="fa-thin fa-house"></i>
+                    <span class="link">Home</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="{% url 'reports:scores' %}">
                     <i class='bx bx-book-open'></i>
                     <span class="link">Scores</span>
                 </a>
+            </li>
+
             <li>
                 <a href="#">
                     <i class='bx bxs-bar-chart-alt-2'></i>
                     <span class="link">Analytics</span>
                 </a>
+            </li>
+
             <li>
                 <a href="#">
                     <i class='bx bx-run'></i>
@@ -78,18 +91,28 @@
                     <span class="link">setting</span>
                 </a>
             <li>
-                {% block logout %}
-                {% endblock %}
+                <a href="{% url 'logout' %}">
+                    <i class='bx bx-log-out'></i>
+                    <span class="link">Logout</span>
+                </a>
+                <!-- {% block logout %} -->
+                <!-- {% endblock %} -->
             </li>
         </ul>
     </div>
+
+    <div class="container-home_info">
+        {% block info %}
+        {% endblock %}
+    </div>
+
     <div class="container_marks">
-        {% block container %}
+        {% block scores %}
         {% endblock %}
     </div>
 
     <div class="analytics">
-        {% block charts %}
+        {% block analytics %}
         {% endblock %}
     </div>
 

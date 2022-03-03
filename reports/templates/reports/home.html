@@ -1,0 +1,12 @@
+{% extends "reports/layout.html" %}
+
+
+{% block info %}
+<div class="home_info">
+    <h1>Welcome, {{ request.user.first_name }}</h1>
+    <h1>Email: {{ request.user.email }} </h1>
+
+
+</div>
+
+{% endblock %}
