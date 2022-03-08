@@ -30,6 +30,7 @@ def home(request):
     return render(request, "reports/home.html")
 
 def analytics(request):
+    # students
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse("login"))
 

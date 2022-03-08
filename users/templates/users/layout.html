@@ -1,4 +1,4 @@
-{% load static %} 
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,33 +41,23 @@
                         </span>
                     </a>
                 </li>
-                <li class="list-item">
+                <!-- <li class="list-item">
                     <a href="home.com" class="header-menu_button">
                         <span class="header-menu_button-label">
                             Help
                         </span>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </nav>
     </header>
 
     <main id="main" role="main">
-        <div class="login">
-
-            <div class="notes">
-                <span>
-                    <h3>Login To Your Account</h3>
-                </span>
-            </div>
+        <div class="container_login">
             {% block body %}
 
+
             {% endblock %}
-            <div class="forgot">
-
-                <a href="">Forgot Password/User ID</a>
-
-            </div>
 
         </div>
     </main>

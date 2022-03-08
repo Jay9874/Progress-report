@@ -46,9 +46,11 @@ head{
 }
 
 
+
+
 body{
-  background: url("https://images.pexels.com/photos/2627945/pexels-photo-2627945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")top right no-repeat;
-  /* background:url("sky.jpg")top right no-repeat; */
+  background: url("images/bckgrnd.jpg") top right no-repeat;
+  
     background-size: cover;
     background-blend-mode: darken;
     background-position-x: 0%;
@@ -68,7 +70,8 @@ body{
            "footer";
 }
 .header{
-  background-color: rgba(255, 255, 255, 0.747);
+  background-color: rgba(231, 212, 176, 0.363);
+  backdrop-filter: blur(4px);
   top: 8px;
   left: 8px;
   width: calc(100% - 16px);
@@ -86,7 +89,8 @@ body{
 
 /* I added extra */
 a:hover{
-  color: rgba(126, 20, 224, 0.842);
+  color: rgba(119, 14, 151, 0.843);
+  /* backdrop-filter: blur(8px); */
 
 }
 
@@ -196,16 +200,18 @@ main{
 }
 
 
-.login{
+.container_login{
   width: 50vw;
   display: flex;
-  background-color: rgba(253, 253, 253, 0.356);
+  
+  background-color: rgba(119, 153, 26, 0.356);
+  backdrop-filter: blur(4px);
   color: rgba(56, 53, 43, 0.856);
   border-radius: 34px;
-  padding: 8px;
-  margin-top: 144px;
-  margin-left: 25vw;
-  margin-bottom: 0%;
+  padding: 15px;
+  left: 25vw;
+  top: 144px;
+  margin-bottom: 100px;
   position: relative;
   text-align: center;
   justify-content: center;
@@ -243,9 +249,21 @@ main{
   align-items: center;
 }
 
-input{
+/* .credentials_menu input[type="text"]{
+  background-color: transparent;
   padding: 0 8px;
 }
+
+.credentials_menu input[type="password"]{
+  background-color: transparent;
+} */
+
+/* input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: transparent !important;
+  color: transparent !important;
+} */
 
 .credentials{
   margin-top: 10px;
@@ -255,7 +273,6 @@ input{
   width: 50%;
   border: none;
   outline: none;
-  background-color: rgba(255, 255, 255, 0.747);
 }
 
 .credentials_login{
@@ -265,24 +282,32 @@ input{
   margin-bottom: 10px;
 }
 .credentials_login:hover{
-  background-color: rgba(255, 255, 255, 0.747);
+  background-color: rgba(231, 212, 176, 0.74);
 }
 
+
+
 .forgot{
-  margin-bottom: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 35px;
 }
 
 .footer{
+  /* display: flex; */
+  width: 100%;
   background-color: transparent;
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.151) ;
+  backdrop-filter: blur(2px);
   grid-area: footer;
-  margin-top: 180px;
-  row-gap: 50px;
-  padding-bottom: 24px;
-  column-gap: 32px;
+  margin-top: 250px;
+  row-gap: 20px;
+  /* padding-bottom: 24px; */
+  column-gap: 30px;
   display: grid;
   z-index: unset;
-  position: unset;
+  position: relative;
   margin-bottom: 0;
   margin-left: 40px;
   margin-right: 40px;
@@ -292,6 +317,11 @@ input{
                        "copyright media meta";
 
 }
+
+.grid_items{
+  padding: 10px;
+}
+
 
 /* new line added */
 /* .grid_items{
@@ -309,7 +339,7 @@ input{
 }
 
 
-.footer-heading-abouyt{
+/* .footer-heading-about{
   display: block;
   font-style: normal;
     font-variant-ligatures: normal;
@@ -320,7 +350,7 @@ input{
     font-stretch: normal;
     font-size: 13px;
     line-height: 1.16;
-}
+} */
 
 
 

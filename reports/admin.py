@@ -5,12 +5,17 @@ from .models import Students, Reports
 # Register your models here.
 
 class StudentsAdmin(admin.ModelAdmin):
+    pass
     list_display = ("first", "last")
 
 class ReportsAdmin(admin.ModelAdmin):
-    list_display = ("candidate", "semester", "physics")
+    pass
+    list_display = ("candidate", "semester", "Physics")
 
 
 
 admin.site.register(Students, StudentsAdmin)
 admin.site.register(Reports, ReportsAdmin)
+admin.site.site_header = "Administrator Page"
+admin.site.site_title = "Administrator Page"
+admin.site.index_title = "Admin"
