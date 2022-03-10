@@ -1,21 +1,25 @@
 from django.contrib import admin
-# from matplotlib.pyplot import cla
-from .models import Students, Reports
-# from django.contrib.auth.models import  User
-# Register your models here.
+from django.contrib.auth.admin import UserAdmin
+from .models import Student, Score, Subjects
 
-class StudentsAdmin(admin.ModelAdmin):
+
+class UserModel(UserAdmin):
     pass
-    list_display = ("first", "last")
 
-class ReportsAdmin(admin.ModelAdmin):
-    pass
-    list_display = ("candidate", "semester", "Physics")
+class StudentAdmin(admin.ModelAdmin):
+    list_display = ("id", "first_name", "standard", "father_name", "roll_number")
 
 
+class ScoreAdmin(admin.ModelAdmin):
+    list_display = ("id", "student_name", "semester", "subject_id", "subject_exam_marks", "subject_assignment_marks")
 
-admin.site.register(Students, StudentsAdmin)
-admin.site.register(Reports, ReportsAdmin)
-admin.site.site_header = "Administrator Page"
-admin.site.site_title = "Administrator Page"
-admin.site.index_title = "Admin"
+
+admin.site.register(Student, StudentAdmin)
+admin.site.register(Score, ScoreAdmin)
+admin.site.register(Subjects)
+
+
+admin.site.site_header = 'Administrator Page'
+
+
+

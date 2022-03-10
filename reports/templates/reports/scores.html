@@ -13,12 +13,16 @@
             <tr>
                 <td>1</td>
                 <td>Phy</td>
-                <td>8/10</td>
+                {% for score in score_list %}
+                <td>
+                    {{ score }}/100
+                </td>
+                {% endfor %}
             </tr>
             <tr>
                 <td>2</td>
                 <td>Maths</td>
-                <td>10/10</td>
+                <td>{{ maths_mark }} /100</td>
             </tr>
             <tr>
                 <td>3</td>
@@ -31,8 +35,25 @@
             <h3>Total: 28/30</h3>
             <h3>Percentage: 93.33%</h3>
         </div>
+
+
+        <dev class="tables">
+            
+            {% for score in score_list %}
+    
+            <ul>
+                <!-- <li>{{ score.physics }} </li> -->
+                <li>{{ score.student.all }} </li>
+                <!-- <li>{{ score.physics }} </li> -->
+                <!-- <li>{{ score.physics }} </li> -->
+                <!-- <li>{{ score.physics }} </li> -->
+            </ul>
+            {% endfor %}
+    
+        </dev>
+
     </div>
 
-
+   
 
 {% endblock %}

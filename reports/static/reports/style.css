@@ -209,6 +209,7 @@ header .search-form label:hover{
     height: 100vh;
     left: 185px;
     display: flex;
+    /* flex-direction: column; */
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
