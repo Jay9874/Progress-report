@@ -27,9 +27,10 @@ class Student(models.Model):
     standard = models.CharField(max_length=10, null=True)
     roll_number = models.BigIntegerField(default=0, null=True,)
     telephone = models.BigIntegerField(default=0, null=True)
+    email = models.EmailField(blank=False, null=True, default="")
     residence = models.TextField(default=0, null=False)
     url = models.URLField(max_length=200, null=True, blank=True)
-    profile_pic = models.FileField(default=0, blank=False, null=False)
+    profile_pic = models.ImageField(upload_to='', default="")
 
 
     objects = models.Manager()

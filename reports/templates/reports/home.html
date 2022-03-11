@@ -3,11 +3,26 @@
 
 {% block container %}
 <div class="container_items home_info">
-    <h1>Welcome, {{ student_name }}</h1>
-    <h1>Email: {{ request.user.email }} </h1>
-    <!-- <h1>Father's Name: {{ Students.father_name }}</h1> -->
+    {% for student in student_list %}
 
 
+    <img src="{{ student.profile_pic.url }}" height="150px" width="150px" style="border-radius: 75px;" alt="img">
+
+    <h1>Welcome, {{ student }}</h1>
+   
+    <h2>Your Informations</h2><br>
+
+    <h3>First Neme: {{ student.first_name }}</h3>
+    <h3>Last Name: {{ student.last_name }}</h3>
+    <h3>Gender: {{ student.gender }}</h3>
+    <h3>Father's Name: {{ student.father_name }}</h3>
+    <h3>Standard: {{ student.standard }}</h3>
+    <h3>University/School Rollno.: {{ student.roll_number }}</h3>
+    <h3>Mobile: {{ student.telephone }}</h3>
+    <h3>Email: {{ student.email }}</h3>
+    <h3>Address: {{ student.residence }}</h3>
+    <h3>Website: {{ student.url }}</h3>
+    {% endfor %}
 </div>
 
 {% endblock %}

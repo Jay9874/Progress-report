@@ -20,7 +20,9 @@
 <body>
     <header>
         <div class="greet">
-            <h2>Hello, {{ request.user.first_name }}</h2>
+            {%for student in student_list %}
+            <h2>Hello, {{ student.first_name }}</h2>
+            {% endfor %}
         </div>
 
 
@@ -48,7 +50,7 @@
         <ul class="nav_list">
 
             <li>
-                <a href="{% url 'reports:home' %}">
+                <a href="{% url 'reports:student_home' %}">
                     <i class="fa-light fa-house-user"></i>
                     <span class="link">Home</span>
                 </a>
